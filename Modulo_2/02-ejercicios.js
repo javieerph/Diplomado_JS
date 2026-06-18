@@ -1,3 +1,4 @@
-let nombre = "Diego Alejandro Palacio Valencia";
+let str = "0101";
 
-console.log(nombre.length);
+let strChange = str.replaceAll(1, 2);
+console.log(strChange);
