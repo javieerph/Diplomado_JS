@@ -1,3 +1,9 @@
-const nombre = "Edgar Romero";
+let usuario = {
+	nombreCompleto: "Edgar Javier castiblanco",
+	edad: 44,
+	tema: "claro",
+};
 
-console.log('Este string tiene', (nombre.length), 'caracteres.');
+const { nombreCompleto, tema } = usuario;
+console.log("El usuario", nombreCompleto, "prefiere el tema", tema);
+

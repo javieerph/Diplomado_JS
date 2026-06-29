@@ -1,4 +1,14 @@
-let str = "0101";
+let cuentaBancaria = {
+	usuario: "Javier",
+	depositos: 123,
+	retiros: 100,
+	saldo: 0,
+	historial: function(){
+		console.log(this.depositos);
+		console.log(this.retiros);
+		console.log(this.saldo);
+	},
+};
 
-let strChange = str.replaceAll(1, 2);
-console.log(strChange);
+console.log(cuentaBancaria);
+cuentaBancaria.historial();
