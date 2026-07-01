@@ -1,14 +1,12 @@
-let cuentaBancaria = {
-	usuario: "Javier",
-	depositos: 123,
-	retiros: 100,
-	saldo: 0,
-	historial: function(){
-		console.log(this.depositos);
-		console.log(this.retiros);
-		console.log(this.saldo);
-	},
-};
+let cantidad = 12;
+let precio = 25000;
+let descuento = 0;
 
-console.log(cuentaBancaria);
-cuentaBancaria.historial();
+if(cantidad >= 5 && cantidad <= 10)
+	descuento = 0.10;
+else if(cantidad > 10)
+	descuento = 0.20;
+else
+	descuento = 0;
+let precioTotal = cantidad * precio - (cantidad * precio * descuento);
+console.log(`El precio total a pagar es de ${precioTotal} euros`);
