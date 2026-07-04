@@ -1,9 +1,5 @@
-let usuario = {
-	nombreCompleto: "Edgar Javier castiblanco",
-	edad: 44,
-	tema: "claro",
-};
+const frutas = ["manzana", "banana", "pera"];
 
-const { nombreCompleto, tema } = usuario;
-console.log("El usuario", nombreCompleto, "prefiere el tema", tema);
+const result = frutas.slice(1, 2);
 
+console.log(result);
