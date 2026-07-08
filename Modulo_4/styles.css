@@ -16,16 +16,15 @@ header {
  text-align: center;
 }
 
-nav a {
-  color:#7dd3fc;
-  margin-right:16px;
-  text-decoration:none;
-}
-
 main {
  max-width: 960px;
  margin: 0 auto;
  padding: 40px 20px;
+}
+
+form * {
+  display: block;
+  margin-bottom: 10px;
 }
 
 footer {
