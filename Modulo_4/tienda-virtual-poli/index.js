@@ -1,20 +1,11 @@
 let productos = [];
 
-const producto = {
-	id: 4156223,
-	nombre: "Arena Pokes x 25 kilos",
-	categoria: "Arena",
-	cantidad: 40,
-	precio: 90000,
-};
-
 let categorias = [
 	"Arena",
 	"Accesorios",
 	"Servicios",
 ]
 
-productos.push(producto);
 
 const buscador                    = document.querySelector('#buscador');
 const listaProductos              = document.querySelector('#lista-productos tbody');
@@ -29,6 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //funcion registrar producto
+
+formularioRegistrarProducto.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	const datos = new FormData(formularioRegistrarProducto);
+
+	const producto = {
+		id: Date.now(),
+		nombre: datos.get('nombre'),
+		categoria: datos.get('categoria'),
+		cantidad: datos.get('cantidad'),
+		precio: datos.get('precio'),
+	};
+
+	productos.push(producto);
+	
+	const modal = bootstrap.Modal.getInstance(modalRegistrarProducto);
+	modal.hide();
+});
 
 //Renderizar categorias
 
